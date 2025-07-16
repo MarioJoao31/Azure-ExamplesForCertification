@@ -5,7 +5,7 @@ from openai import AzureOpenAI
 import json
 
 # You will need to set these environment variables or edit the following values.
-endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://ai-a235068057ai412435609452.cognitiveservices.azure.com/")
+endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://ai-#########.cognitiveservices.azure.com/")
 api_version = os.getenv("OPENAI_API_VERSION", "2024-04-01-preview")
 deployment = os.getenv("DEPLOYMENT_NAME", "dall-e-3")
 
@@ -21,11 +21,11 @@ client = AzureOpenAI(
 
 result = client.images.generate(
     model=deployment,
-    prompt="i want a cleanner image.
+    prompt="""i want a cleanner image.
 i want a image put the letters SAIA with the label "small ai applications".
 need to have microcontrollers and cameras.
 The image need to pass the feeling for security, for video survaliance.
-pls use a style for web applications ",
+pls use a style for web applications """,
     n=1,
     style="natural",
     quality="standard"
