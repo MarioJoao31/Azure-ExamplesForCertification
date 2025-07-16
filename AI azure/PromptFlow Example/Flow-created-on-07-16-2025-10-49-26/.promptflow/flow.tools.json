@@ -1,0 +1,42 @@
+{
+  "package": {},
+  "code": {
+    "echo.py": {
+      "name": "echo.py",
+      "type": "python",
+      "inputs": {
+        "input": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${joke.output}",
+          "id": "w653cf6v"
+        }
+      },
+      "source": "echo.py",
+      "function": "echo",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "echo.py"
+    },
+    "joke.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "topic": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "description": "Prompt is a jinja2 template that generates prompt for LLM",
+      "is_builtin": false,
+      "name": "joke.jinja2",
+      "source": "joke.jinja2",
+      "toolId": "joke.jinja2"
+    }
+  }
+}
